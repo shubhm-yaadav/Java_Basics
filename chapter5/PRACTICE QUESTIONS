@@ -1,0 +1,247 @@
+JAVA PRACTICE QUESTIONS (INTERMEDIATE)
+Topics: Classes, Objects, Arrays, Methods
+
+--------------------------------------------------
+QUESTION 1: Employee Payroll System
+--------------------------------------------------
+Create a class Employee with these private fields:
+  - int id
+  - String name
+  - String department
+  - double basicSalary
+
+Write the following:
+  1. A parameterized constructor to set all four fields.
+  2. Getters for all fields and a setter for basicSalary.
+  3. A method double calculateNetSalary() that returns:
+       HRA = 20% of basicSalary
+       DA  = 10% of basicSalary
+       Tax = 5% of (basicSalary + HRA + DA)
+       Net Salary = basicSalary + HRA + DA - Tax
+  4. A method void display() that prints all details with the net salary.
+
+In main():
+  - Create an array of 5 Employee objects (hard-code the values).
+  - Write a static method Employee highestPaid(Employee[] arr) that returns the employee with the highest net salary.
+  - Write a static method void raiseSalary(Employee[] arr, String dept, double percent) that increases basicSalary of all employees in the given department by the given percent.
+  - Print all employees, call raiseSalary for "IT" with 10 percent, then print all again to show the change.
+  - Print the details of the highest paid employee.
+
+--------------------------------------------------
+QUESTION 2: Student Result Processing
+--------------------------------------------------
+Create a class Student with fields:
+  - String name
+  - int rollNo
+  - int[] marks   (marks in 5 subjects)
+
+Write the following methods inside the class:
+  1. Constructor Student(String name, int rollNo, int[] marks)
+  2. int total()          - returns the sum of marks
+  3. double percentage()  - returns total / 5
+  4. char grade()         - returns grade based on percentage:
+        90 and above -> 'A'
+        75 to 89     -> 'B'
+        50 to 74     -> 'C'
+        35 to 49     -> 'D'
+        below 35     -> 'F'
+  5. boolean isPass()     - returns true only if the student has at least 35 in EVERY subject
+  6. void display()       - prints name, roll no, total, percentage, grade and Pass/Fail
+
+In main():
+  - Take input using Scanner for 4 students (name, roll no, 5 marks each).
+  - Store them in a Student[] array.
+  - Display all results.
+  - Print the name of the topper (highest total).
+  - Print how many students got each grade (A, B, C, D, F).
+  - Print the list of students who failed.
+
+--------------------------------------------------
+QUESTION 3: Bank Account Management
+--------------------------------------------------
+Create a class BankAccount with:
+  - Private fields: int accNo, String holderName, double balance
+  - Constructor taking all three values
+  - void deposit(double amount)  - reject amounts <= 0 with an error message
+  - boolean withdraw(double amount)  - returns false and prints "Insufficient balance" if amount > balance, else deducts and returns true
+  - void display()
+
+Create a class Bank with:
+  - A BankAccount[] accounts array of size 10 and an int count to track how many accounts exist
+  - void addAccount(BankAccount acc)  - prints "Bank is full" if no space
+  - BankAccount findAccount(int accNo) - returns null if not found
+  - boolean transfer(int fromAcc, int toAcc, double amount)
+        * Both accounts must exist, otherwise print an error and return false
+        * Money moves only if the withdrawal succeeds
+  - double totalBankBalance()
+  - void displayAll()
+
+In main():
+  - Add 4 accounts.
+  - Deposit into one, withdraw from another.
+  - Transfer 500 between two accounts.
+  - Try a transfer that fails (too much money, or a wrong account number).
+  - Display all accounts and the total bank balance.
+
+--------------------------------------------------
+QUESTION 4: Array Operations Using Methods
+--------------------------------------------------
+Write a class ArrayOps with the following STATIC methods. Do not use Arrays.sort or any other built-in utility to do the work.
+
+  1. int[] removeDuplicates(int[] arr)
+        Returns a new array with duplicates removed, keeping the first occurrence of each value.
+        Example: {4, 2, 4, 7, 2, 9} -> {4, 2, 7, 9}
+
+  2. int[] rotateLeft(int[] arr, int k)
+        Returns a new array rotated left by k positions. k can be larger than the array length.
+        Example: {1, 2, 3, 4, 5}, k = 2 -> {3, 4, 5, 1, 2}
+
+  3. int secondLargest(int[] arr)
+        Returns the second largest distinct value. If it does not exist, return -1.
+        Example: {10, 5, 10, 8} -> 8
+
+  4. int[] mergeSorted(int[] a, int[] b)
+        Both inputs are already sorted ascending. Return one sorted array containing all elements (do this in one pass, without sorting again).
+        Example: {1, 4, 7} and {2, 3, 9} -> {1, 2, 3, 4, 7, 9}
+
+  5. boolean isPalindrome(int[] arr)
+        Returns true if the array reads the same forwards and backwards.
+
+  6. void printArray(int[] arr)
+        Prints in the format [1, 2, 3]
+
+In main(), test every method with at least two different inputs, including edge cases such as an empty array, a single element array and all elements equal.
+
+--------------------------------------------------
+QUESTION 5: Library Management
+--------------------------------------------------
+Create a class Book with fields:
+  - int bookId, String title, String author, double price
+  - boolean isIssued (false by default)
+  - String issuedTo (null by default)
+
+Methods in Book:
+  - Constructor Book(int bookId, String title, String author, double price)
+  - boolean issueBook(String memberName)
+        If already issued, print "Already issued to <name>" and return false.
+        Otherwise set isIssued = true, store the name and return true.
+  - void returnBook()
+        Reset isIssued and issuedTo. Print a message if the book was not issued.
+  - void display()
+
+Create a class Library with:
+  - Book[] books (size 10) and int count
+  - void addBook(Book b)
+  - Book searchById(int id)
+  - Book[] searchByAuthor(String author)
+        Returns a new array containing only the matching books. The array must be exactly as long as the number of matches. If no match, return an empty array.
+  - int countAvailable()
+  - double totalValueOfIssuedBooks()
+  - void displayIssuedBooks()
+
+In main():
+  - Add 6 books (at least two by the same author).
+  - Issue 3 books to different members.
+  - Try to issue an already issued book.
+  - Search by author and display the results.
+  - Return one book and show the available count before and after.
+
+--------------------------------------------------
+QUESTION 6: Matrix Class
+--------------------------------------------------
+Create a class Matrix that stores a 2D array int[][] data.
+
+Write the following:
+  1. Constructor Matrix(int rows, int cols) - creates an empty matrix
+  2. Constructor Matrix(int[][] values)     - copies the values (do not just copy the reference)
+  3. Matrix add(Matrix other)
+        Returns a new matrix. If the sizes do not match, print an error and return null.
+  4. Matrix multiply(Matrix other)
+        Matrix multiplication. It is valid only when this.cols == other.rows. Otherwise print an error and return null.
+  5. Matrix transpose()
+  6. int diagonalSum()
+        Sum of the main diagonal. Print an error and return -1 if the matrix is not square.
+  7. int[] rowSums()
+        Returns an array holding the sum of each row.
+  8. boolean isSymmetric()
+  9. void display()
+        Prints in neat rows and columns.
+
+Test data:
+  A = | 1 2 3 |     B = | 7  8  |
+      | 4 5 6 |         | 9  10 |
+                        | 11 12 |
+
+  Print A x B, the transpose of A, and row sums of A.
+  Expected A x B = | 58  64  |
+                   | 139 154 |
+
+--------------------------------------------------
+QUESTION 7: Online Shopping Cart
+--------------------------------------------------
+Create a class Product with fields: int id, String name, double price, int stock.
+  - Constructor for all fields
+  - boolean reduceStock(int qty)  - reduces stock if enough is available, else returns false
+  - void display()
+
+Create a class CartItem with fields: Product product, int quantity.
+  - Constructor
+  - double subtotal()  - returns product price * quantity
+
+Create a class Cart with:
+  - CartItem[] items (size 5) and int itemCount
+  - boolean addToCart(Product p, int qty)
+        * Fail if the cart is full
+        * Fail if stock is not enough (print a message)
+        * If the same product is already in the cart, increase its quantity instead of adding a new item
+  - boolean removeFromCart(int productId)
+        Remove the item and shift the remaining items left so there are no gaps.
+  - double totalBill()
+        Apply a 10% discount if the total is above 5000.
+  - void displayCart()  - prints each item, subtotal and the final bill
+  - void checkout()     - reduces the stock of every product in the cart and then empties the cart
+
+In main():
+  - Create a Product[] with 5 products.
+  - Add several items to the cart, including the same product twice.
+  - Try to add more than the available stock.
+  - Remove one item, display the cart, then checkout.
+  - Display the products again to show the reduced stock.
+
+--------------------------------------------------
+QUESTION 8: Sorting Objects (Mini Project)
+--------------------------------------------------
+Create a class Player with fields: String name, int matches, int runs, int wickets.
+
+Methods:
+  - Constructor
+  - double battingAverage()  - runs / matches (return 0 if matches is 0)
+  - void display()
+
+In a class TeamManager, write static methods (no Arrays.sort allowed; write your own sorting logic):
+  1. void sortByRuns(Player[] arr)
+        Sort in descending order of runs using bubble sort.
+  2. void sortByName(Player[] arr)
+        Sort alphabetically using selection sort. Use compareTo() for comparing strings.
+  3. Player[] topN(Player[] arr, int n)
+        Returns the top n players by runs as a new array. Do not change the original array order (work on a copy).
+  4. Player bestBowler(Player[] arr)
+        Returns the player with the most wickets.
+  5. int totalRuns(Player[] arr)
+  6. Player[] allRounders(Player[] arr)
+        Returns players who have more than 1000 runs AND more than 50 wickets.
+
+In main():
+  - Create 8 players with different stats.
+  - Show the list sorted by runs, then sorted by name.
+  - Show the top 3 players, the best bowler, the total runs and the all-rounders.
+
+--------------------------------------------------
+TIPS
+--------------------------------------------------
+  - Keep fields private and access them through getters and setters.
+  - Use this.name = name; in constructors.
+  - A method that returns a value should not print it. Print in main().
+  - Always check for null before using an element of an object array.
+  - Before running the code, dry-run it by hand with small inputs.
+  - Test edge cases: empty array, one element, full array, invalid input.
