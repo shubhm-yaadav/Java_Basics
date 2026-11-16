@@ -1,0 +1,480 @@
+
+JAVA PROGRAMMING PRACTICE
+========================
+
+LEVEL: INTERMEDIATE TO ADVANCED
+TOTAL QUESTIONS: 20
+
+CONCEPTS:
+Classes, Objects, Arrays, Methods, Object References
+and Problem Solving.
+
+
+Q1. ADVANCED STUDENT RESULT ANALYZER
+-----------------------------------
+Create a Student class with:
+- name
+- rollNumber
+- marks (array of 6 subjects)
+
+Requirements:
+1. Create 10 Student objects.
+2. Create a method to calculate total marks.
+3. Create a method to calculate percentage.
+4. Create a method to return the student's grade.
+5. Find the highest scorer in every subject.
+6. Find the class topper and second topper.
+7. Calculate the class average.
+8. Display students scoring above the class average.
+9. Find students who failed in at least one subject.
+10. Create a method that accepts two Student objects and compares their performance.
+
+
+Q2. EMPLOYEE PERFORMANCE AND SALARY SYSTEM
+------------------------------------------
+Create an Employee class with:
+- employeeId
+- name
+- department
+- basicSalary
+- performanceRating (1-5)
+
+Requirements:
+1. Create 10 Employee objects.
+2. Calculate HRA (20% of basic salary).
+3. Calculate DA (10% of basic salary).
+4. Calculate gross salary.
+5. Give a bonus based on performance rating:
+   Rating 5 = 20%
+   Rating 4 = 15%
+   Rating 3 = 10%
+   Rating 2 = 5%
+   Rating 1 = 0%
+6. Find the highest-paid employee.
+7. Find the second-highest-paid employee.
+8. Calculate total salary expenditure.
+9. Find the average salary of employees.
+10. Display employees whose salary is above average.
+
+
+Q3. BANK TRANSACTION ANALYZER
+-----------------------------
+Create a BankAccount class with:
+- accountNumber
+- accountHolder
+- balance
+- transactions (array of double)
+
+Requirements:
+1. Create 5 BankAccount objects.
+2. Create a deposit() method.
+3. Create a withdraw() method.
+4. Store every successful transaction.
+5. Create a method to calculate total deposits.
+6. Create a method to calculate total withdrawals.
+7. Find the account with the highest balance.
+8. Find the account with the highest total deposits.
+9. Transfer money between two account objects.
+10. Ensure that an invalid transaction does not change the balance.
+
+
+Q4. PRODUCT INVENTORY AND SALES ANALYZER
+----------------------------------------
+Create a Product class with:
+- productId
+- productName
+- price
+- stockQuantity
+- soldQuantity
+
+Requirements:
+1. Create 10 Product objects.
+2. Create a method to sell products.
+3. Create a method to add stock.
+4. Calculate the total stock value.
+5. Calculate the total revenue generated.
+6. Find the most sold product.
+7. Find the least sold product.
+8. Find products with stock below 5.
+9. Find the product generating the highest revenue.
+10. Display all products sorted by price (without using built-in sorting).
+
+
+Q5. OBJECT REFERENCE CHALLENGE
+------------------------------
+Create a Laptop class with:
+- brand
+- model
+- price
+- RAM
+
+Requirements:
+1. Create 4 Laptop objects.
+2. Create 8 reference variables.
+3. Make multiple references point to the same objects.
+4. Modify an object's properties using different references.
+5. Reassign references between objects.
+6. Create a method that accepts two Laptop objects.
+7. Compare their prices and return the more expensive Laptop.
+8. Create a method that swaps the values of two elements in a Laptop array.
+9. Explain which references point to the same object after every reassignment.
+10. Use == to compare object references.
+
+
+Q6. LIBRARY MANAGEMENT AND SEARCH SYSTEM
+----------------------------------------
+Create a Book class with:
+- bookId
+- title
+- author
+- price
+- availableCopies
+
+Requirements:
+1. Create 10 Book objects.
+2. Search books using bookId.
+3. Search books using title.
+4. Find the most expensive book.
+5. Find the second-most-expensive book.
+6. Display books by a particular author.
+7. Create a borrowBook() method.
+8. Create a returnBook() method.
+9. Calculate the total value of all available books.
+10. Create a method that accepts two Book objects and compares their prices.
+
+
+Q7. MOVIE RATING AND RANKING SYSTEM
+-----------------------------------
+Create a Movie class with:
+- movieName
+- director
+- rating
+- totalVotes
+
+Requirements:
+1. Create 10 Movie objects.
+2. Calculate the average rating.
+3. Find the highest-rated movie.
+4. Find the second-highest-rated movie.
+5. Display movies above average rating.
+6. Find the movie with the highest number of votes.
+7. Sort all movies by rating in descending order.
+8. Display movies having ratings between 7 and 9.
+9. Create a method to compare two movies.
+10. Find movies having identical ratings.
+
+
+Q8. SHOPPING CART BILL GENERATOR
+--------------------------------
+Create a Product class with:
+- productId
+- productName
+- price
+- quantity
+
+Create a ShoppingCart class with:
+- products (array of Product objects)
+- totalProducts
+
+Requirements:
+1. Create 5 Product objects.
+2. Add products to the shopping cart.
+3. Remove products from the cart.
+4. Update product quantities.
+5. Calculate the total bill.
+6. Apply a 10% discount if the bill exceeds 5000.
+7. Find the most expensive product.
+8. Display products with quantities greater than 2.
+9. Calculate the average product price.
+10. Display the final invoice.
+
+
+Q9. HOSPITAL PATIENT ANALYSIS SYSTEM
+------------------------------------
+Create a Patient class with:
+- patientId
+- patientName
+- age
+- disease
+- consultationFee
+
+Requirements:
+1. Create 10 Patient objects.
+2. Find the oldest patient.
+3. Find the youngest patient.
+4. Calculate total consultation fees.
+5. Find patients with the same disease.
+6. Search patients by patientId.
+7. Increase consultation fees by 15%.
+8. Find the patient paying the highest consultation fee.
+9. Calculate the average patient age.
+10. Compare two patients using a method.
+
+
+Q10. VEHICLE RENTAL MANAGEMENT
+------------------------------
+Create a Vehicle class with:
+- vehicleId
+- brand
+- rentPerDay
+- availableDays
+
+Requirements:
+1. Create 8 Vehicle objects.
+2. Calculate rental costs for different durations.
+3. Find the vehicle with the highest rent.
+4. Find the vehicle with the lowest rent.
+5. Display vehicles available for more than 7 days.
+6. Update availability after booking.
+7. Prevent booking when sufficient days are unavailable.
+8. Calculate total potential rental revenue.
+9. Sort vehicles by rent.
+10. Find the second-most-expensive vehicle.
+
+
+Q11. TWO-DIMENSIONAL STUDENT MARKS ANALYZER
+-------------------------------------------
+Create a Student class with:
+- name
+- rollNumber
+- marks (array of 5 subjects)
+
+Requirements:
+1. Create 10 Student objects.
+2. Calculate the average marks in each subject.
+3. Find the topper in each subject.
+4. Find the student with the highest overall percentage.
+5. Find the subject with the lowest class average.
+6. Display students who scored above average in every subject.
+7. Find students with identical total marks.
+8. Calculate the difference between the topper and lowest scorer.
+9. Find the second-highest scorer.
+10. Generate a complete result report.
+
+
+Q12. DEPARTMENT AND EMPLOYEE ANALYZER
+-------------------------------------
+Create two classes: Department and Employee.
+
+Department:
+- departmentId
+- departmentName
+- employees (array of Employee objects)
+
+Employee:
+- employeeId
+- name
+- salary
+
+Requirements:
+1. Create 4 Department objects.
+2. Each department should contain multiple Employee objects.
+3. Calculate total salary expenditure per department.
+4. Find the highest-paid employee in each department.
+5. Find the department with the highest expenditure.
+6. Calculate the average salary per department.
+7. Find employees earning above their department average.
+8. Count the employees in each department.
+9. Compare two departments based on salary expenditure.
+10. Display a complete department report.
+
+
+Q13. BANK CUSTOMER AND TRANSACTION HISTORY
+------------------------------------------
+Create two classes: Customer and Transaction.
+
+Customer:
+- customerId
+- name
+- balance
+- transactions (array of Transaction objects)
+
+Transaction:
+- transactionId
+- transactionType
+- amount
+
+Requirements:
+1. Create 5 Customer objects.
+2. Each customer should have multiple transactions.
+3. Store every successful transaction.
+4. Calculate total deposits and withdrawals.
+5. Find the customer with the highest balance.
+6. Find the customer with the highest transaction volume.
+7. Display transaction history for a particular customer.
+8. Find customers with no withdrawals.
+9. Calculate the average transaction amount.
+10. Transfer money between customers and record both transactions.
+
+
+Q14. E-COMMERCE ORDER MANAGEMENT
+--------------------------------
+Create two classes: Product and Order.
+
+Product:
+- productId
+- name
+- price
+- stock
+
+Order:
+- orderId
+- products (array of Product objects)
+- quantities (array of integers)
+
+Requirements:
+1. Create 10 Product objects.
+2. Create 5 Order objects.
+3. Each order should contain multiple products.
+4. Calculate the total amount of each order.
+5. Update product stock after successful orders.
+6. Prevent orders exceeding available stock.
+7. Find the highest-value order.
+8. Find the most frequently ordered product.
+9. Calculate total sales revenue.
+10. Display complete order details.
+
+
+Q15. HOTEL ROOM BOOKING SYSTEM
+------------------------------
+Create a Room class with:
+- roomNumber
+- roomType
+- pricePerDay
+- isAvailable
+
+Create a Booking class with:
+- bookingId
+- customerName
+- room (Room object)
+- days
+
+Requirements:
+1. Create 10 Room objects.
+2. Create multiple Booking objects.
+3. Book available rooms.
+4. Prevent booking an already-booked room.
+5. Calculate the total booking amount.
+6. Find the most expensive room.
+7. Display all available rooms.
+8. Calculate total hotel revenue.
+9. Find the customer with the highest booking amount.
+10. Return a room after checkout.
+
+
+Q16. INVENTORY COMPARISON SYSTEM
+--------------------------------
+Create a Warehouse class with:
+- warehouseId
+- warehouseName
+- products (array of Product objects)
+
+Requirements:
+1. Create 3 Warehouse objects.
+2. Add multiple products to each warehouse.
+3. Calculate the total inventory value of each warehouse.
+4. Find the warehouse with the highest inventory value.
+5. Find products available in all warehouses.
+6. Find products available in one warehouse but not another.
+7. Compare two warehouses.
+8. Transfer product stock between warehouses.
+9. Prevent stock transfer beyond available quantity.
+10. Generate a warehouse inventory report.
+
+
+Q17. LIBRARY COLLECTION COMPARISON
+----------------------------------
+Create a Library class with:
+- libraryId
+- libraryName
+- books (array of Book objects)
+
+Requirements:
+1. Create 3 Library objects.
+2. Add multiple books to each library.
+3. Find common books between two libraries.
+4. Find books available in one library but not another.
+5. Calculate the total value of each library.
+6. Find the library with the highest number of books.
+7. Compare two libraries using a method.
+8. Find the most expensive book across all libraries.
+9. Find duplicate book IDs.
+10. Generate a complete library report.
+
+
+Q18. STUDENT OBJECT ARRAY MANIPULATION
+--------------------------------------
+Create a Student class with:
+- name
+- rollNumber
+- marks
+
+Requirements:
+1. Create an array of 10 Student objects.
+2. Reverse the array without creating another array.
+3. Swap two Student objects using their indexes.
+4. Search for a Student using rollNumber.
+5. Remove a Student from the array.
+6. Insert a new Student at a given position.
+7. Find duplicate roll numbers.
+8. Sort students by marks without using built-in sorting.
+9. Find the top three students.
+10. Create a method that accepts a Student array and returns the topper.
+
+
+Q19. BANK ACCOUNT MERGER AND COMPARISON
+---------------------------------------
+Create a BankAccount class with:
+- accountNumber
+- accountHolder
+- balance
+
+Requirements:
+1. Create 5 BankAccount objects.
+2. Find accounts with identical balances.
+3. Find the account with the highest balance.
+4. Find the second-highest balance.
+5. Calculate the total balance across all accounts.
+6. Create a method that accepts two accounts and returns the account with the higher balance.
+7. Create a method to transfer money between two accounts.
+8. Create a method to compare two accounts.
+9. Find accounts with balances below the average.
+10. Generate an account summary.
+
+
+Q20. COMPLETE UNIVERSITY MANAGEMENT SYSTEM
+-------------------------------------------
+Create three classes: Student, Teacher and Course.
+
+Student:
+- studentId
+- name
+- marks (array of subjects)
+
+Teacher:
+- teacherId
+- name
+- salary
+
+Course:
+- courseId
+- courseName
+- teacher (Teacher object)
+- students (array of Student objects)
+
+Requirements:
+1. Create 3 Teacher objects.
+2. Create 5 Course objects.
+3. Assign teachers to courses.
+4. Assign multiple students to each course.
+5. Calculate the average marks of each course.
+6. Find the topper in each course.
+7. Find the teacher handling the highest number of students.
+8. Find the course with the highest average marks.
+9. Find students enrolled in multiple courses.
+10. Generate a complete university report.
+
+
+=========================================
+END OF JAVA PRACTICE QUESTIONS
+=========================================
