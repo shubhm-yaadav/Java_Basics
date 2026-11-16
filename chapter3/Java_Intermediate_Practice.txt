@@ -1,0 +1,147 @@
+JAVA INTERMEDIATE PRACTICE QUESTIONS
+Topics: Classes, Objects and Arrays of Objects
+
+INSTRUCTIONS:
+1. Solve every question using Java.
+2. Use classes and objects wherever required.
+3. Store multiple objects in arrays.
+4. Do not use ArrayList or Collections.
+5. Do not use built-in sorting methods.
+6. Try to solve independently.
+
+--------------------------------------------------
+LEVEL 1: OBJECT MANIPULATION
+--------------------------------------------------
+
+Q1. Student Marks Analyzer
+Create a Student class with name, rollNumber and marks.
+- Create an array of 6 Student objects.
+- Find the highest and second-highest marks.
+- Print the names of both students.
+- Print students who scored above the class average.
+
+Q2. Employee Salary Management
+Create an Employee class with id, name and salary.
+- Create 5 employee objects.
+- Increase every employee's salary by 10%.
+- Find the employee with the highest salary.
+- Print employees whose salary is above 50000.
+
+Q3. Object Reference Tracking
+Create a Laptop class with brand, price and RAM.
+- Create 3 Laptop objects.
+- Create multiple references pointing to the same object.
+- Modify the price using one reference.
+- Assign one reference to another object.
+- Print all references and explain which references point to the same object.
+
+Q4. Product Inventory
+Create a Product class with id, name, price and quantity.
+- Create 6 products.
+- Calculate the total inventory value.
+- Find the product with the highest inventory value (price * quantity).
+- Print products whose quantity is below 5.
+
+Q5. Book Store Management
+Create a Book class with bookId, title, author and price.
+- Create 6 book objects.
+- Search for a book using its bookId.
+- Find the most expensive and cheapest books.
+- Print all books written by a particular author.
+
+--------------------------------------------------
+LEVEL 2: LOGICAL PROBLEMS
+--------------------------------------------------
+
+Q6. Student Ranking System
+Create a Student class with name, rollNumber and marks.
+- Create 8 student objects.
+- Find the top 3 students based on marks.
+- Print their names, roll numbers and marks.
+- Do not use built-in sorting methods.
+
+Q7. Duplicate Object Data
+Create an Employee class with id, name and department.
+- Create 7 employee objects.
+- Find employees having the same department.
+- Identify duplicate employee IDs.
+- Print all duplicate records.
+
+Q8. Bank Account Operations
+Create a BankAccount class with accountNumber, holderName and balance.
+- Create 5 bank accounts.
+- Find an account using its account number.
+- Transfer a specified amount from one account to another.
+- Check whether sufficient balance is available.
+- Print the updated balances.
+
+Q9. Merge Two Object Arrays
+Create a Product class with id, name and price.
+- Create two separate arrays containing 3 products each.
+- Merge both arrays into a third array.
+- Print all products from the merged array.
+- Identify products having duplicate IDs.
+
+Q10. Separate Objects Based on Conditions
+Create a Student class with name, rollNumber and marks.
+- Create 10 Student objects.
+- Separate students into two arrays:
+  1. Passed students (marks >= 40).
+  2. Failed students (marks < 40).
+- Print both arrays.
+
+--------------------------------------------------
+LEVEL 3: CHALLENGING PROBLEMS
+--------------------------------------------------
+
+Q11. Second Highest Salary
+Create an Employee class with id, name and salary.
+- Create 8 employees.
+- Find the employee with the second-highest distinct salary.
+- Handle the case where all employees have the same salary.
+- Do not use sorting.
+
+Q12. Shopping Cart System
+Create a Product class with productId, productName, price and quantity.
+- Create 6 products.
+- Create a shopping cart using an array of Product references.
+- Calculate the total cart value.
+- Find the most expensive product in the cart.
+- Print products whose quantity exceeds 2.
+
+Q13. Object Replacement
+Create a Student class with name, rollNumber and marks.
+- Create an array of 5 Student references.
+- Replace the student at index 2 with a new Student object.
+- Print the array before and after replacement.
+- Check whether the original object is still accessible through another reference.
+
+Q14. Employee Department Analyzer
+Create an Employee class with id, name, department and salary.
+- Create 10 employees.
+- Count employees in each department.
+- Calculate the average salary of each department.
+- Find the highest-paid employee in each department.
+
+Q15. Library Management Analysis
+Create a Book class with bookId, title, author and price.
+- Create an array of 10 Book objects.
+- Find books having the same author.
+- Calculate the total value of all books.
+- Find the average book price.
+- Find the third most expensive book without sorting.
+- Search for a book using its title.
+
+--------------------------------------------------
+IMPORTANT CHALLENGE:
+--------------------------------------------------
+
+For every question:
+- Write the class separately from the main method.
+- Create and initialize objects using new.
+- Use loops to process arrays.
+- Avoid unnecessary repeated code.
+- Think about edge cases.
+- Explain your logic in comments.
+
+END OF PRACTICE SET
