@@ -1,0 +1,192 @@
+JAVA PRACTICE PROBLEMS: CLASSES, OBJECTS, ARRAYS AND METHODS
+=============================================================
+
+Each problem combines classes, objects, arrays and methods.
+Do Problem 1 first (simplest). Problem 4 is the hardest (2D array).
+
+
+=============================================================
+PROBLEM 1: LIBRARY BOOK MANAGER
+=============================================================
+
+THE PROBLEM
+Write a program that manages books in a small library.
+
+Class Book
+  - title (String), author (String), isAvailable (boolean)
+  - a constructor taking title and author (a new book is available by default)
+  - issue(): marks the book as issued and returns true.
+    If it is already issued, it returns false.
+  - giveBack(): marks the book as available again
+  - display(): prints the title, author, and status
+
+Class Library
+  - Book[] books (size 10) and an int count
+  - addBook(Book b): adds a book if there is space
+  - searchByTitle(String t): returns the Book, or null if not found
+  - issueBook(String t): finds the book and issues it. Prints a message for
+    success, "already issued", or "not found".
+  - countAvailable(): returns how many books are currently available
+  - showAll(): shows every book
+
+In main: add 4 books, issue 2 of them, try to issue one twice, then print the
+available count.
+
+WHAT IT WANTS FROM YOU
+The object's state changes over time (available becomes issued). issueBook()
+must combine two steps: search the array, then change the object you found.
+Your methods must also handle the "not found" case safely, because
+searchByTitle can return null.
+
+SAMPLE OUTPUT
+  Issued: Java Basics
+  Sorry, Java Basics is already issued.
+  Book not found: Python Intro
+  Available books: 2
+
+HINT
+Compare strings with .equals(), not ==. Check if (b != null) before using the
+result of a search.
+
+
+=============================================================
+PROBLEM 2: BANK WITH MULTIPLE ACCOUNTS
+=============================================================
+
+THE PROBLEM
+Class Account
+  - accNo (int), holderName (String), private double balance
+  - deposit(double amt): rejects amounts of 0 or less
+  - withdraw(double amt): rejects the withdrawal if amt > balance, and returns
+    true or false
+  - getBalance()
+
+Class Bank
+  - Account[] accounts and a count
+  - openAccount(...): creates an account and stores it
+  - findAccount(int accNo): returns the matching Account or null
+  - transfer(int fromNo, int toNo, double amt): moves money between two
+    accounts. It must fail safely if either account is missing or the balance
+    is too low.
+  - totalMoneyInBank(): returns the sum of all balances
+  - richestCustomer(): returns the Account with the highest balance
+
+In main: open 4 accounts, do some deposits, withdrawals, and transfers
+(including a failing one), then print the total and the richest customer.
+
+WHAT IT WANTS FROM YOU
+This tests encapsulation (private balance) and objects talking to each other.
+transfer() does not touch balances directly. It calls withdraw() on one object
+and deposit() on another. If the withdrawal fails, the deposit must not happen.
+
+SAMPLE OUTPUT
+  Transfer of 500.0 from 101 to 102: SUCCESS
+  Transfer of 9000.0 from 103 to 101: FAILED (insufficient funds)
+  Total money in bank: 23500.0
+  Richest: Meera (Balance: 12000.0)
+
+HINT
+In transfer, do: if (from.withdraw(amt)) { to.deposit(amt); }
+That one line keeps the logic safe.
+
+
+=============================================================
+PROBLEM 3: EMPLOYEE SALARY REPORT
+=============================================================
+
+THE PROBLEM
+Class Employee
+  - id, name, baseSalary, and int[] bonuses (monthly bonuses for 4 months)
+  - totalBonus(): returns the sum of the bonuses array
+  - totalSalary(): returns baseSalary * 4 + totalBonus()
+  - toString(): returns a formatted line with the employee's details
+
+Class Company
+  - Employee[] staff (size 6)
+  - addEmployee(Employee e)
+  - highestPaid(): returns the Employee with the largest totalSalary()
+  - averageSalary(): returns the average total salary of all employees
+  - aboveAverage(): PRINTS every employee earning more than the average
+  - sortBySalary(): sorts the staff array in descending order of totalSalary()
+
+In main: create 5 employees, add them, call every method, and print the
+results.
+
+WHAT IT WANTS FROM YOU
+This is the array-inside-object plus array-of-objects pattern again, but with
+more algorithm work. aboveAverage() depends on averageSalary(), so one method
+calls another method of the same class. sortBySalary() makes you sort objects
+by comparing a value returned from a method, not by comparing the objects
+themselves.
+
+SAMPLE OUTPUT
+  Average salary: 52400.0
+  Above average:
+    Neha  - 61000.0
+    Arjun - 58500.0
+  Highest paid: Neha
+
+HINT
+For sorting, use bubble sort and swap whole Employee references:
+  Employee temp = staff[i]; staff[i] = staff[j]; staff[j] = temp;
+
+
+=============================================================
+PROBLEM 4: CINEMA SEAT BOOKING (2D ARRAY)
+=============================================================
+
+THE PROBLEM
+A cinema hall has 5 rows and 6 seats per row.
+
+Class Hall
+  - boolean[][] seats (a 5x6 grid where true means booked)
+  - Hall(): constructor that creates an empty grid
+  - bookSeat(int row, int col): returns true if booked successfully, false if
+    the seat is already taken or the position is invalid
+  - cancelSeat(int row, int col)
+  - availableSeats(): returns the total count of free seats
+  - rowWithMostFree(): returns the row number with the most free seats
+  - displayLayout(): prints the grid. Show [X] for booked and [ ] for free.
+
+Class Booking (a record of one booking)
+  - customerName, row, col
+  - display()
+
+In main:
+  - Create a Hall and a Booking[] array of size 10.
+  - Make 5 bookings. Each time, call bookSeat and only if it succeeds, store a
+    Booking object in the array.
+  - Try booking the same seat twice and an out-of-range seat (row 9).
+  - Print the layout, free seats, and all stored bookings.
+
+WHAT IT WANTS FROM YOU
+You combine a 2D array inside a class with an array of objects in main. The
+most important part is validation: check the row and column are inside the
+grid BEFORE you access seats[row][col], otherwise you get an
+ArrayIndexOutOfBoundsException.
+
+SAMPLE OUTPUT
+     0   1   2   3   4   5
+  0 [X] [ ] [ ] [ ] [ ] [ ]
+  1 [ ] [X] [ ] [ ] [ ] [ ]
+  2 [ ] [ ] [ ] [ ] [ ] [ ]
+  ...
+  Seat (0,0) already booked!
+  Invalid seat (9,2)!
+  Free seats: 28
+  Row with most free seats: 2
+
+HINT
+Write validation as the first line of bookSeat:
+  if (row < 0 || row >= 5 || col < 0 || col >= 6) return false;
+
+
+=============================================================
+HOW TO PRACTICE THESE
+=============================================================
+1. Do Problem 1 first. Problem 4 is the hardest because of the 2D array.
+2. Write the class with its fields and constructor first, then add one method
+   at a time and test each in main before moving on.
+3. After finishing, ask yourself: which array is inside an object, and which
+   array holds objects?
+   
